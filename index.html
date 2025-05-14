@@ -1,0 +1,1196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jeddah 95 Girls' School Chinese Character Writing Competition Report</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.8/dist/chart.umd.min.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1E88E5', // 蓝色主色调
+                        secondary: '#43A047', // 绿色辅助色
+                        accent: '#26A69A', // 蓝绿色强调
+                        neutral: '#F5F7FA', // 背景色
+                        dark: '#2C3E50' // 深色文本
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .content-auto {
+                content-visibility: auto;
+            }
+            .card-shadow {
+                box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            }
+            .hover-lift {
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+            }
+            .hover-lift:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            }
+            .progress-bar {
+                height: 100%;
+                transition: width 1.5s ease-in-out;
+            }
+            .fade-in {
+                animation: fadeIn 0.8s ease-in-out;
+            }
+            @keyframes fadeIn {
+                from { opacity: 0; transform: translateY(20px); }
+                to { opacity: 1; transform: translateY(0); }
+            }
+            .stroke-animation {
+                stroke-dasharray: 1000;
+                stroke-dashoffset: 1000;
+                animation: dash 2s linear forwards;
+            }
+            @keyframes dash {
+                to {
+                    stroke-dashoffset: 0;
+                }
+            }
+            .carousel-container {
+                overflow: hidden;
+                position: relative;
+            }
+            .carousel-slide {
+                display: flex;
+                transition: transform 0.5s ease-in-out;
+            }
+            .carousel-item {
+                min-width: 100%;
+                height: 400px;
+                background-size: cover;
+                background-position: center;
+            }
+            .gallery-thumbnails {
+                display: flex;
+                overflow-x: auto;
+                gap: 8px;
+                padding: 8px 0;
+            }
+            .gallery-thumbnail {
+                width: 80px;
+                height: 60px;
+                object-fit: cover;
+                cursor: pointer;
+                border: 2px solid transparent;
+                transition: border-color 0.3s;
+            }
+            .gallery-thumbnail.active {
+                border-color: #1E88E5;
+            }
+        }
+    </style>
+</head>
+<body class="bg-neutral text-dark min-h-screen">
+    <!-- 顶部导航 -->
+    <header class="bg-white shadow-md sticky top-0 z-50 transition-all duration-300" id="header">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-4">
+                <!-- Logo 1 位置 -->
+                <div class="w-16 h-16">
+                    <img src="file:///C:/Users/woshi/Desktop/Chinese%20competition/logo1.png" alt="School Logo" class="w-full h-full object-contain">
+                </div>
+                <div>
+                    <h1 class="text-xl md:text-2xl font-bold text-primary">Jeddah 95 Girls' School</h1>
+                    <p class="text-sm text-gray-500">Chinese Character Writing Competition Report</p>
+                </div>
+                <!-- Logo 2 位置 -->
+                <div class="w-16 h-16">
+                    <img src="file:///C:/Users/woshi/Desktop/Chinese%20competition/logo2.png" alt="Event Logo" class="w-full h-full object-contain">
+                </div>
+            </div>
+            <nav class="hidden md:flex space-x-6">
+                <a href="#overview" class="text-gray-600 hover:text-primary transition-colors">Competition Overview</a>
+                <a href="#results" class="text-gray-600 hover:text-primary transition-colors">Results</a>
+                <a href="#awards" class="text-gray-600 hover:text-primary transition-colors">Awards</a>
+                <a href="#feedback" class="text-gray-600 hover:text-primary transition-colors">Feedback & Suggestions</a>
+                <a href="#conclusion" class="text-gray-600 hover:text-primary transition-colors">Conclusion</a>
+            </nav>
+            <button class="md:hidden text-gray-600" id="menu-toggle">
+                <i class="fa-solid fa-bars text-xl"></i>
+            </button>
+        </div>
+        <!-- 移动端菜单 -->
+        <div class="md:hidden hidden bg-white w-full" id="mobile-menu">
+            <div class="px-4 py-2 space-y-3">
+                <a href="#overview" class="block text-gray-600 hover:text-primary py-2 transition-colors">Competition Overview</a>
+                <a href="#results" class="block text-gray-600 hover:text-primary py-2 transition-colors">Results</a>
+                <a href="#awards" class="block text-gray-600 hover:text-primary py-2 transition-colors">Awards</a>
+                <a href="#feedback" class="block text-gray-600 hover:text-primary py-2 transition-colors">Feedback & Suggestions</a>
+                <a href="#conclusion" class="block text-gray-600 hover:text-primary py-2 transition-colors">Conclusion</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Art Gallery 图片展示栏 -->
+    <section class="bg-white py-8 shadow-md">
+        <div class="container mx-auto px-4">
+            <h2 class="text-2xl font-bold text-primary mb-6">Art Gallery</h2>
+            
+            <div class="mb-4 flex justify-between items-center">
+                <div class="flex space-x-2">
+                    <button id="prev-slide" class="bg-primary text-white px-4 py-2 rounded-lg hover:bg-primary/90 transition-colors">
+                        <i class="fa-solid fa-chevron-left"></i> Previous
+                    </button>
+                    <button id="next-slide" class="bg-primary text-white px-4 py-2 rounded-lg hover:bg-primary/90 transition-colors">
+                        Next <i class="fa-solid fa-chevron-right"></i>
+                    </button>
+                </div>
+                <label for="image-upload" class="bg-secondary text-white px-4 py-2 rounded-lg cursor-pointer hover:bg-secondary/90 transition-colors">
+                    <i class="fa-solid fa-upload mr-2"></i> Upload Images
+                </label>
+                <input type="file" id="image-upload" accept="image/*" multiple class="hidden">
+            </div>
+            
+            <!-- 图片轮播区域 -->
+            <div class="carousel-container rounded-xl overflow-hidden mb-4">
+                <div class="carousel-slide" id="carousel-slide">
+                    <!-- 默认展示图片 -->
+                    <div class="carousel-item" style="background-image: url('C:/Users/woshi/Desktop/Chinese competition/c1.jpg')"></div>
+                    <div class="carousel-item" style="background-image: url('C:/Users/woshi/Desktop/Chinese competition/c2.jpg')"></div>
+                    <div class="carousel-item" style="background-image: url('C:/Users/woshi/Desktop/Chinese competition/c3.jpg')"></div>
+                    <div class="carousel-item" style="background-image: url('C:/Users/woshi/Desktop/Chinese competition/w1.jpg')"></div>
+                     <div class="carousel-item" style="background-image: url('C:/Users/woshi/Desktop/Chinese competition/w2.jpg')"></div>
+                </div>
+            </div>
+            
+            <!-- 缩略图区域 -->
+            <div class="gallery-thumbnails" id="gallery-thumbnails">
+                <img src="https://picsum.photos/1200/400?random=10" alt="Thumbnail 1" class="gallery-thumbnail active">
+                <img src="https://picsum.photos/1200/400?random=11" alt="Thumbnail 2" class="gallery-thumbnail">
+                <img src="https://picsum.photos/1200/400?random=12" alt="Thumbnail 3" class="gallery-thumbnail">
+            </div>
+        </div>
+    </section>
+
+    <main class="container mx-auto px-4 py-8">
+        <!-- 封面部分 -->
+        <section class="mb-12 fade-in">
+            <div class="relative bg-gradient-to-r from-primary to-accent rounded-2xl overflow-hidden h-[300px] md:h-[400px] flex items-center">
+                <div class="absolute inset-0 opacity-20">
+                    <svg viewBox="0 0 100 100" preserveAspectRatio="none" class="w-full h-full">
+                        <path d="M0,0 L100,0 L100,100 L0,100 Z" fill="url(#grid)" />
+                        <defs>
+                            <pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse">
+                                <path d="M 10 0 L 0 0 0 10" fill="none" stroke="#ffffff" stroke-width="0.5" />
+                            </pattern>
+                        </defs>
+                    </svg>
+                </div>
+                <div class="container mx-auto px-6 relative z-10 text-white">
+                    <h1 class="text-[clamp(2rem,5vw,3.5rem)] font-bold mb-2">Chinese Character Writing Competition</h1>
+                    <p class="text-[clamp(1rem,2vw,1.25rem)] mb-4 opacity-90">Chinese Memory Master</p>
+                    <p class="text-[clamp(0.875rem,1.5vw,1rem)] max-w-2xl opacity-80">Grade 7 Chinese Character Dictation Competition - Term 3</p>
+                    <div class="flex flex-wrap gap-4 mt-6">
+                        <span class="bg-white/20 px-4 py-2 rounded-full text-sm backdrop-blur-sm">
+                            <i class="fa-solid fa-calendar mr-2"></i>April 30, 2025
+                        </span>
+                        <span class="bg-white/20 px-4 py-2 rounded-full text-sm backdrop-blur-sm">
+                            <i class="fa-solid fa-clock mr-2"></i>30 minutes
+                        </span>
+                        <span class="bg-white/20 px-4 py-2 rounded-full text-sm backdrop-blur-sm">
+                            <i class="fa-solid fa-users mr-2"></i>All Grade 7 Students
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 比赛概况 -->
+        <section id="overview" class="mb-16 fade-in" style="animation-delay: 0.1s">
+            <div class="flex flex-col md:flex-row items-start gap-8">
+                <div class="md:w-1/3">
+                    <div class="sticky top-24">
+                        <h2 class="text-[clamp(1.5rem,3vw,2rem)] font-bold text-primary mb-4 flex items-center">
+                            <i class="fa-solid fa-info-circle mr-3 text-2xl"></i>Competition Overview
+                        </h2>
+                        <p class="text-gray-600 mb-6">This competition aimed to reinforce students' memory of Chinese characters, encourage accurate handwriting and character recognition, and promote a fun and competitive learning environment through scoring, prizes, and public recognition.</p>
+                        <div class="bg-white rounded-xl p-6 shadow-lg">
+                            <div class="flex items-center mb-4">
+                                <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mr-4">
+                                    <i class="fa-solid fa-trophy text-primary text-xl"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-bold text-lg">Competition Objectives</h3>
+                                    <p class="text-sm text-gray-500">Reinforce memory, encourage accuracy, foster competition</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center mb-4">
+                                <div class="w-12 h-12 rounded-full bg-secondary/10 flex items-center justify-center mr-4">
+                                    <i class="fa-solid fa-stopwatch text-secondary text-xl"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-bold text-lg">Duration</h3>
+                                    <p class="text-sm text-gray-500">30-minute timed dictation challenge</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center mr-4">
+                                    <i class="fa-solid fa-graduation-cap text-accent text-xl"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-bold text-lg">Participants</h3>
+                                    <p class="text-sm text-gray-500">All Grade 7 Chinese language learners</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="md:w-2/3">
+                    <div class="bg-white rounded-xl p-6 shadow-lg mb-6">
+                        <h3 class="text-xl font-bold mb-4 flex items-center">
+                            <i class="fa-solid fa-bullseye text-primary mr-3"></i>Competition Objectives
+                        </h3>
+                        <ul class="space-y-3">
+                            <li class="flex items-start">
+                                <div class="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center mr-3 mt-1 flex-shrink-0">
+                                    <i class="fa-solid fa-check text-primary text-sm"></i>
+                                </div>
+                                <p>Reinforce students' memory of Chinese characters through a time-limited dictation challenge</p>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center mr-3 mt-1 flex-shrink-0">
+                                    <i class="fa-solid fa-check text-primary text-sm"></i>
+                                </div>
+                                <p>Encourage accurate handwriting and character recognition abilities</p>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center mr-3 mt-1 flex-shrink-0">
+                                    <i class="fa-solid fa-check text-primary text-sm"></i>
+                                </div>
+                                <p>Promote a fun and competitive learning environment through scoring, prizes, and public recognition</p>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="bg-white rounded-xl p-6 shadow-lg mb-6">
+                        <h3 class="text-xl font-bold mb-4 flex items-center">
+                            <i class="fa-solid fa-format-list-numbered text-primary mr-3"></i>Competition Format
+                        </h3>
+                        <div class="space-y-4">
+                            <div class="bg-neutral rounded-lg p-4">
+                                <h4 class="font-bold text-primary mb-2">Task</h4>
+                                <p>Write as many correct Chinese characters from memory as possible within 30 minutes</p>
+                            </div>
+                            <div class="bg-neutral rounded-lg p-4">
+                                <h4 class="font-bold text-primary mb-2">Scoring</h4>
+                                <p>1 point per correct character. Bonus points for students scoring over 20 points</p>
+                            </div>
+                            <div class="bg-neutral rounded-lg p-4">
+                                <h4 class="font-bold text-primary mb-2">Recognition</h4>
+                                <ul class="list-disc pl-5 mt-2 space-y-1">
+                                    <li>Top 10 students across the grade received certificates and prizes</li>
+                                    <li>Top 3 classes (based on average score) received group certificates</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="bg-white rounded-xl p-6 shadow-lg hover-lift">
+                            <div class="flex justify-between items-center mb-4">
+                                <h3 class="text-xl font-bold">Participants</h3>
+                                <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
+                                    <i class="fa-solid fa-users text-primary text-xl"></i>
+                                </div>
+                            </div>
+                            <div class="text-4xl font-bold text-primary mb-2">107</div>
+                            <p class="text-gray-600">Total Grade 7 students</p>
+                        </div>
+                        <div class="bg-white rounded-xl p-6 shadow-lg hover-lift">
+                            <div class="flex justify-between items-center mb-4">
+                                <h3 class="text-xl font-bold">Maximum Possible Score</h3>
+                                <div class="w-12 h-12 rounded-full bg-secondary/10 flex items-center justify-center">
+                                    <i class="fa-solid fa-pencil text-secondary text-xl"></i>
+                                </div>
+                            </div>
+                            <div class="text-4xl font-bold text-secondary mb-2">100+</div>
+                            <p class="text-gray-600">Theoretical maximum characters</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 比赛结果 -->
+        <section id="results" class="mb-16 fade-in" style="animation-delay: 0.2s">
+            <h2 class="text-[clamp(1.5rem,3vw,2rem)] font-bold text-primary mb-8 flex items-center">
+                <i class="fa-solid fa-chart-bar mr-3 text-2xl"></i>Competition Results
+            </h2>
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                <div class="lg:col-span-2 bg-white rounded-xl p-6 shadow-lg">
+                    <h3 class="text-xl font-bold mb-6">Class Average Scores Comparison</h3>
+                    <div class="h-[350px]">
+                        <canvas id="classScoresChart"></canvas>
+                    </div>
+                </div>
+                <div class="bg-white rounded-xl p-6 shadow-lg">
+                    <h3 class="text-xl font-bold mb-6">Class Participation</h3>
+                    <div class="space-y-6">
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-medium">Class 1</span>
+                                <span>29 students</span>
+                            </div>
+                            <div class="h-4 bg-gray-200 rounded-full overflow-hidden">
+                                <div class="progress-bar bg-primary" style="width: 27%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-medium">Class 2</span>
+                                <span>29 students</span>
+                            </div>
+                            <div class="h-4 bg-gray-200 rounded-full overflow-hidden"><div class="h-4 bg-gray-200 rounded-full overflow-hidden">
+                                <div class="progress-bar bg-secondary" style="width: 27%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-medium">Class 3</span>
+                                <span>31 students</span>
+                            </div>
+                            <div class="h-4 bg-gray-200 rounded-full overflow-hidden">
+                                <div class="progress-bar bg-accent" style="width: 29%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-medium">Class 4</span>
+                                <span>18 students</span>
+                            </div>
+                            <div class="h-4 bg-gray-200 rounded-full overflow-hidden">
+                                <div class="progress-bar bg-primary/70" style="width: 17%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-8 grid grid-cols-1 lg:grid-cols-3 gap-6">
+                <div class="bg-white rounded-xl p-6 shadow-lg">
+                    <h3 class="text-xl font-bold mb-6">Highest Score</h3>
+                    <div class="flex flex-col items-center justify-center">
+                        <div class="w-32 h-32 rounded-full bg-primary/10 flex items-center justify-center mb-4">
+                            <span class="text-5xl font-bold text-primary">64</span>
+                        </div>
+                        <p class="text-lg text-gray-600">Achieved by 2 students</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-xl p-6 shadow-lg">
+                    <h3 class="text-xl font-bold mb-6">Average Score</h3>
+                    <div class="flex flex-col items-center justify-center">
+                        <div class="w-32 h-32 rounded-full bg-secondary/10 flex items-center justify-center mb-4">
+                            <span class="text-5xl font-bold text-secondary">19.86</span>
+                        </div>
+                        <p class="text-lg text-gray-600">Overall grade average</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-xl p-6 shadow-lg">
+                    <h3 class="text-xl font-bold mb-6">Lowest Score</h3>
+                    <div class="flex flex-col items-center justify-center">
+                        <div class="w-32 h-32 rounded-full bg-accent/10 flex items-center justify-center mb-4">
+                            <span class="text-5xl font-bold text-accent">8</span>
+                        </div>
+                        <p class="text-lg text-gray-600">Lowest score in the competition</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-8 bg-white rounded-xl p-6 shadow-lg">
+                <h3 class="text-xl font-bold mb-6">Top 10 Individual Performers</h3>
+                <div class="overflow-x-auto">
+                    <table class="w-full">
+                        <thead>
+                            <tr class="border-b border-gray-200">
+                                <th class="py-3 px-4 text-left font-bold text-gray-600">Rank</th>
+                                <th class="py-3 px-4 text-left font-bold text-gray-600">Student</th>
+                                <th class="py-3 px-4 text-left font-bold text-gray-600">Class</th>
+                                <th class="py-3 px-4 text-left font-bold text-gray-600">Score</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="border-b border-gray-100 hover:bg-gray-50 transition-colors">
+                                <td class="py-3 px-4">1</td>
+                                <td class="py-3 px-4 font-medium">Student A</td>
+                                <td class="py-3 px-4">Class 2</td>
+                                <td class="py-3 px-4 font-bold text-primary">64</td>
+                            </tr>
+                            <tr class="border-b border-gray-100 hover:bg-gray-50 transition-colors">
+                                <td class="py-3 px-4">1</td>
+                                <td class="py-3 px-4 font-medium">Student B</td>
+                                <td class="py-3 px-4">Class 3</td>
+                                <td class="py-3 px-4 font-bold text-primary">64</td>
+                            </tr>
+                            <tr class="border-b border-gray-100 hover:bg-gray-50 transition-colors">
+                                <td class="py-3 px-4">3</td>
+                                <td class="py-3 px-4 font-medium">Student C</td>
+                                <td class="py-3 px-4">Class 2</td>
+                                <td class="py-3 px-4 font-bold text-secondary">62</td>
+                            </tr>
+                            <tr class="border-b border-gray-100 hover:bg-gray-50 transition-colors">
+                                <td class="py-3 px-4">4</td>
+                                <td class="py-3 px-4 font-medium">Student D</td>
+                                <td class="py-3 px-4">Class 1</td>
+                                <td class="py-3 px-4 font-bold text-accent">58</td>
+                            </tr>
+                            <tr class="border-b border-gray-100 hover:bg-gray-50 transition-colors">
+                                <td class="py-3 px-4">5</td>
+                                <td class="py-3 px-4 font-medium">Student E</td>
+                                <td class="py-3 px-4">Class 4</td>
+                                <td class="py-3 px-4 font-bold">57</td>
+                            </tr>
+                            <tr class="border-b border-gray-100 hover:bg-gray-50 transition-colors">
+                                <td class="py-3 px-4">6</td>
+                                <td class="py-3 px-4 font-medium">Student F</td>
+                                <td class="py-3 px-4">Class 2</td>
+                                <td class="py-3 px-4 font-bold">54</td>
+                            </tr>
+                            <tr class="border-b border-gray-100 hover:bg-gray-50 transition-colors">
+                                <td class="py-3 px-4">7</td>
+                                <td class="py-3 px-4 font-medium">Student G</td>
+                                <td class="py-3 px-4">Class 3</td>
+                                <td class="py-3 px-4 font-bold">52</td>
+                            </tr>
+                            <tr class="border-b border-gray-100 hover:bg-gray-50 transition-colors">
+                                <td class="py-3 px-4">8</td>
+                                <td class="py-3 px-4 font-medium">Student H</td>
+                                <td class="py-3 px-4">Class 1</td>
+                                <td class="py-3 px-4 font-bold">49</td>
+                            </tr>
+                            <tr class="border-b border-gray-100 hover:bg-gray-50 transition-colors">
+                                <td class="py-3 px-4">9</td>
+                                <td class="py-3 px-4 font-medium">Student I</td>
+                                <td class="py-3 px-4">Class 4</td>
+                                <td class="py-3 px-4 font-bold">46</td>
+                            </tr>
+                            <tr class="border-b border-gray-100 hover:bg-gray-50 transition-colors">
+                                <td class="py-3 px-4">10</td>
+                                <td class="py-3 px-4 font-medium">Student J</td>
+                                <td class="py-3 px-4">Class 3</td>
+                                <td class="py-3 px-4 font-bold">43</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- 获奖情况 -->
+        <section id="awards" class="mb-16 fade-in" style="animation-delay: 0.3s">
+            <h2 class="text-[clamp(1.5rem,3vw,2rem)] font-bold text-primary mb-8 flex items-center">
+                <i class="fa-solid fa-award mr-3 text-2xl"></i>Awards & Recognition
+            </h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                <div class="bg-white rounded-xl p-6 shadow-lg">
+                    <h3 class="text-xl font-bold mb-6 flex items-center">
+                        <i class="fa-solid fa-user text-primary mr-3"></i>Individual Awards
+                    </h3>
+                    <div class="space-y-4">
+                        <div class="flex items-center p-4 bg-neutral rounded-lg">
+                            <div class="w-16 h-16 rounded-full bg-yellow-100 flex items-center justify-center mr-4">
+                                <i class="fa-solid fa-medal text-yellow-500 text-2xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold">Top 10 Students</h4>
+                                <p class="text-gray-600">Received principal-signed certificates, themed prizes (stationery, books), and bonus points for Chinese subject</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center p-4 bg-neutral rounded-lg">
+                            <div class="w-16 h-16 rounded-full bg-blue-100 flex items-center justify-center mr-4">
+                                <i class="fa-solid fa-star text-blue-500 text-2xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold">Perfect Score Award</h4>
+                                <p class="text-gray-600">Special recognition for students achieving 64 points</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-xl p-6 shadow-lg">
+                    <h3 class="text-xl font-bold mb-6 flex items-center">
+                        <i class="fa-solid fa-users text-primary mr-3"></i>Class Awards
+                    </h3>
+                    <div class="space-y-4">
+                        <div class="flex items-center p-4 bg-neutral rounded-lg">
+                            <div class="w-16 h-16 rounded-full bg-yellow-100 flex items-center justify-center mr-4">
+                                <i class="fa-solid fa-trophy text-yellow-500 text-2xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold">First Place</h4>
+                                <p class="text-gray-600">Class 2 - Average score 21.80</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center p-4 bg-neutral rounded-lg">
+                            <div class="w-16 h-16 rounded-full bg-gray-100 flex items-center justify-center mr-4">
+                                <i class="fa-solid fa-medal text-gray-400 text-2xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold">Second Place</h4>
+                                <p class="text-gray-600">Class 4 - Average score 19.40</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center p-4 bg-neutral rounded-lg">
+                            <div class="w-16 h-16 rounded-full bg-orange-100 flex items-center justify-center mr-4">
+                                <i class="fa-solid fa-medal text-orange-500 text-2xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold">Third Place</h4>
+                                <p class="text-gray-600">Class 1 - Average score 18.74</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="bg-white rounded-xl p-6 shadow-lg">
+                <h3 class="text-xl font-bold mb-6">Award Winners</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="bg-neutral rounded-lg p-5 hover-lift">
+                        <div class="flex justify-between items-start mb-4">
+                            <div class="w-12 h-12 rounded-full bg-yellow-100 flex items-center justify-center">
+                                <i class="fa-solid fa-trophy text-yellow-500 text-xl"></i>
+                            </div>
+                            <span class="text-2xl font-bold text-yellow-500">1</span>
+                        </div>
+                        <h4 class="font-bold text-lg mb-2">Class 2</h4>
+                        <p class="text-gray-600 mb-3">Average Score: 21.80</p>
+                        <p class="text-sm text-gray-500">Total Students: 29</p>
+                        <div class="mt-4 pt-4 border-t border-gray-200">
+                            <h5 class="font-medium mb-2">Class Representatives:</h5>
+                            <ul class="space-y-1">
+                                <li class="flex items-center">
+                                    <i class="fa-solid fa-user-circle text-primary mr-2"></i>
+                                    <span>Student A - 64 points</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fa-solid fa-user-circle text-primary mr-2"></i>
+                                    <span>Student C - 62 points</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fa-solid fa-user-circle text-primary mr-2"></i>
+                                    <span>Student F - 54 points</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-neutral rounded-lg p-5 hover-lift">
+                        <div class="flex justify-between items-start mb-4">
+                            <div class="w-12 h-12 rounded-full bg-gray-100 flex items-center justify-center">
+                                <i class="fa-solid fa-medal text-gray-400 text-xl"></i>
+                            </div>
+                            <span class="text-2xl font-bold text-gray-400">2</span>
+                        </div>
+                        <h4 class="font-bold text-lg mb-2">Class 4</h4>
+                        <p class="text-gray-600 mb-3">Average Score: 19.40</p>
+                        <p class="text-sm text-gray-500">Total Students: 18</p>
+                        <div class="mt-4 pt-4 border-t border-gray-200">
+                            <h5 class="font-medium mb-2">Class Representatives:</h5>
+                            <ul class="space-y-1">
+                                <li class="flex items-center">
+                                    <i class="fa-solid fa-user-circle text-primary mr-2"></i>
+                                    <span>Student E - 57 points</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fa-solid fa-user-circle text-primary mr-2"></i>
+                                    <span>Student I - 46 points</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-neutral rounded-lg p-5 hover-lift">
+                        <div class="flex justify-between items-start mb-4">
+                            <div class="w-12 h-12 rounded-full bg-orange-100 flex items-center justify-center">
+                                <i class="fa-solid fa-medal text-orange-500 text-xl"></i>
+                            </div>
+                            <span class="text-2xl font-bold text-orange-500">3</span>
+                        </div>
+                        <h4 class="font-bold text-lg mb-2">Class 1</h4>
+                        <p class="text-gray-600 mb-3">Average Score: 18.74</p>
+                        <p class="text-sm text-gray-500">Total Students: 29</p>
+                        <div class="mt-4 pt-4 border-t border-gray-200">
+                            <h5 class="font-medium mb-2">Class Representatives:</h5>
+                            <ul class="space-y-1">
+                                <li class="flex items-center">
+                                    <i class="fa-solid fa-user-circle text-primary mr-2"></i>
+                                    <span>Student D - 58 points</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fa-solid fa-user-circle text-primary mr-2"></i>
+                                    <span>Student H - 49 points</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 反馈建议 -->
+        <section id="feedback" class="mb-16 fade-in" style="animation-delay: 0.4s">
+            <h2 class="text-[clamp(1.5rem,3vw,2rem)] font-bold text-primary mb-8 flex items-center">
+                <i class="fa-solid fa-comments mr-3 text-2xl"></i>Feedback & Suggestions
+            </h2>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <div class="bg-white rounded-xl p-6 shadow-lg">
+                    <h3 class="text-xl font-bold mb-6 flex items-center">
+                        <i class="fa-solid fa-thumbs-up text-primary mr-3"></i>Strengths & Highlights
+                    </h3>
+                    <ul class="space-y-4">
+                        <li class="flex">
+                            <div class="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center mr-3 mt-1 flex-shrink-0">
+                                <i class="fa-solid fa-check text-primary"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold">High Motivation</h4>
+                                <p class="text-gray-600">High level of motivation and participation from all classes</p>
+                            </div>
+                        </li>
+                        <li class="flex">
+                            <div class="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center mr-3 mt-1 flex-shrink-0">
+                                <i class="fa-solid fa-check text-primary"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold">Excellent Memorization</h4>
+                                <p class="text-gray-600">Top performers demonstrated excellent character memorization abilities</p>
+                            </div>
+                        </li>
+                        <li class="flex">
+                            <div class="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center mr-3 mt-1 flex-shrink-0">
+                                <i class="fa-solid fa-check text-primary"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold">Resource Utilization</h4>
+                                <p class="text-gray-600">Active use of review materials and Pleco app for learning</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="bg-white rounded-xl p-6 shadow-lg">
+                    <h3 class="text-xl font-bold mb-6 flex items-center">
+                        <i class="fa-solid fa-exclamation-triangle text-primary mr-3"></i>Challenges & Issues
+                    </h3>
+                    <ul class="space-y-4">
+                        <li class="flex">
+                            <div class="w-8 h-8 rounded-full bg-red-100 flex items-center justify-center mr-3 mt-1 flex-shrink-0">
+                                <i class="fa-solid fa-times text-red-500"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold">Stroke Order Errors</h4>
+                                <p class="text-gray-600">Common mistakes included incorrect stroke order</p>
+                            </div>
+                        </li>
+                        <li class="flex">
+                            <div class="w-8 h-8 rounded-full bg-red-100 flex items-center justify-center mr-3 mt-1 flex-shrink-0">
+                                <i class="fa-solid fa-times text-red-500"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold">Character Structure Issues</h4>
+                                <p class="text-gray-600">Character structure errors, such as misplacement of radicals or components</p>
+                            </div>
+                        </li>
+                        <li class="flex">
+                            <div class="w-8 h-8 rounded-full bg-red-100 flex items-center justify-center mr-3 mt-1 flex-shrink-0">
+                                <i class="fa-solid fa-times text-red-500"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold">Rote Memorization</h4>
+                                <p class="text-gray-600">Some students relied too much on rote memorization without contextual understanding</p>
+                            </div>
+                        </li>
+                        <li class="flex">
+                            <div class="w-8 h-8 rounded-full bg-red-100 flex items-center justify-center mr-3 mt-1 flex-shrink-0">
+                                <i class="fa-solid fa-times text-red-500"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold">Confusion with Similar Characters</h4>
+                                <p class="text-gray-600">Some students confused similar-looking characters or forgot basic strokes under time pressure</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="mt-8 bg-white rounded-xl p-6 shadow-lg">
+                <h3 class="text-xl font-bold mb-6 flex items-center">
+                    <i class="fa-solid fa-lightbulb text-primary mr-3"></i>Suggestions & Improvements
+                </h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="bg-neutral rounded-lg p-5">
+                        <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-4">
+                            <i class="fa-solid fa-pencil text-primary text-xl"></i>
+                        </div>
+                        <h4 class="font-bold text-lg mb-3">Classroom Improvements</h4>
+                        <ul class="space-y-2">
+                            <li class="flex items-start">
+                                <i class="fa-solid fa-check-circle text-secondary mr-2 mt-1"></i>
+                                <span>Increase focus on character writing in class</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa-solid fa-check-circle text-secondary mr-2 mt-1"></i>
+                                <span>Weekly practice dictation drills</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa-solid fa-check-circle text-secondary mr-2 mt-1"></i>
+                                <span>Handwriting warm-up activities</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa-solid fa-check-circle text-secondary mr-2 mt-1"></i>
+                                <span>Character decomposition and structure explanation</span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="bg-neutral rounded-lg p-5">
+                        <div class="w-12 h-12 rounded-full bg-secondary/10 flex items-center justify-center mb-4">
+                            <i class="fa-solid fa-gamepad text-secondary text-xl"></i>
+                        </div>
+                        <h4 class="font-bold text-lg mb-3">Learning Method Improvements</h4>
+                        <ul class="space-y-2">
+                            <li class="flex items-start">
+                                <i class="fa-solid fa-check-circle text-primary mr-2 mt-1"></i>
+                                <span>Teach radicals and how characters are formed</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa-solid fa-check-circle text-primary mr-2 mt-1"></i>
+                                <span>Highlight common confusion patterns</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa-solid fa-check-circle text-primary mr-2 mt-1"></i>
+                                <span>Gamification of writing practice</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa-solid fa-check-circle text-primary mr-2 mt-1"></i>
+                                <span>Team-based writing games</span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="bg-neutral rounded-lg p-5">
+                        <div class="w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center mb-4">
+                            <i class="fa-solid fa-trophy text-accent text-xl"></i>
+                        </div>
+                        <h4 class="font-bold text-lg mb-3">Incentive Measures</h4>
+                        <ul class="space-y-2">
+                            <li class="flex items-start">
+                                <i class="fa-solid fa-check-circle text-accent mr-2 mt-1"></i>
+                                <span>Stroke order competitions</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa-solid fa-check-circle text-accent mr-2 mt-1"></i>
+                                <span>Small incentives to reward progress</span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="bg-neutral rounded-lg p-5">
+                        <div class="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center mb-4">
+                            <i class="fa-solid fa-laptop text-blue-500 text-xl"></i>
+                        </div>
+                        <h4 class="font-bold text-lg mb-3">Digital Tool Integration</h4>
+                        <ul class="space-y-2">
+                            <li class="flex items-start">
+                                <i class="fa-solid fa-check-circle text-blue-500 mr-2 mt-1"></i>
+                                <span>Interactive stroke order apps</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa-solid fa-check-circle text-blue-500 mr-2 mt-1"></i>
+                                <span>Online character practice platforms</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa-solid fa-check-circle text-blue-500 mr-2 mt-1"></i>
+                                <span>Multimedia learning resources</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 结论与展望 -->
+        <section id="conclusion" class="mb-16 fade-in" style="animation-delay: 0.5s">
+            <h2 class="text-[clamp(1.5rem,3vw,2rem)] font-bold text-primary mb-8 flex items-center">
+                <i class="fa-solid fa-forward mr-3 text-2xl"></i>Conclusion & Future Plans
+            </h2>
+            
+            <div class="bg-white rounded-xl p-6 shadow-lg mb-8">
+                <h3 class="text-xl font-bold mb-6">Competition Summary</h3>
+                <div class="prose max-w-none">
+                    <p>The Chinese Character Writing Competition held on April 30, 2025, was a great success, with all 107 Grade 7 students actively participating. The competition effectively reinforced students' memory of Chinese characters and promoted a competitive learning environment.</p>
+                    <p>Notable achievements include the high scores achieved by top students, with two students scoring a perfect 64 points. Class 2 performed exceptionally well, securing the first place with an average score of 21.80.</p>
+                    <p>However, common errors such as stroke order mistakes and character structure issues were identified, highlighting areas for improvement in future teaching and learning strategies.</p>
+                </div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-white rounded-xl p-6 shadow-lg">
+                    <h3 class="text-xl font-bold mb-6 flex items-center">
+                        <i class="fa-solid fa-check-circle text-secondary mr-3"></i>Key Takeaways
+                    </h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <div class="w-8 h-8 rounded-full bg-secondary/10 flex items-center justify-center mr-3 mt-1 flex-shrink-0">
+                                <i class="fa-solid fa-check text-secondary"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold">Effective Learning Tools</h4>
+                                <p class="text-gray-600">Students who used review materials and digital tools like Pleco performed better</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="w-8 h-8 rounded-full bg-secondary/10 flex items-center justify-center mr-3 mt-1 flex-shrink-0">
+                                <i class="fa-solid fa-check text-secondary"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold">Importance of Structure</h4>
+                                <p class="text-gray-600">Students need more practice and guidance on character structure and stroke order</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="w-8 h-8 rounded-full bg-secondary/10 flex items-center justify-center mr-3 mt-1 flex-shrink-0">
+                                <i class="fa-solid fa-check text-secondary"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold">Gamification Potential</h4>
+                                <p class="text-gray-600">Incorporating games and competitions can significantly enhance motivation and engagement</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="bg-white rounded-xl p-6 shadow-lg">
+                    <h3 class="text-xl font-bold mb-6 flex items-center">
+                        <i class="fa-solid fa-rocket text-primary mr-3"></i>Future Plans
+                    </h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <div class="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center mr-3 mt-1 flex-shrink-0">
+                                <i class="fa-solid fa-arrow-right text-primary"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold">Regular Practice Sessions</h4>
+                                <p class="text-gray-600">Implement weekly dictation drills and handwriting warm-up activities</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center mr-3 mt-1 flex-shrink-0">
+                                <i class="fa-solid fa-arrow-right text-primary"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold">Radical-Based Learning</h4>
+                                <p class="text-gray-600">Focus on teaching radicals and character composition to improve understanding</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center mr-3 mt-1 flex-shrink-0">
+                                <i class="fa-solid fa-arrow-right text-primary"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold">Digital Tool Integration</h4>
+                                <p class="text-gray-600">Utilize interactive apps and online resources to supplement classroom learning</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center mr-3 mt-1 flex-shrink-0">
+                                <i class="fa-solid fa-arrow-right text-primary"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold">Future Competitions</h4>
+                                <p class="text-gray-600">Organize more specialized competitions, such as stroke order competitions</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-dark text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Jeddah 95 Girls' School</h3>
+                    <p class="text-gray-300 mb-4">Committed to providing quality education and fostering academic excellence in all students.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-300 hover:text-white transition-colors">
+                            <i class="fa-brands fa-facebook"></i>
+                        </a>
+                        <a href="#" class="text-gray-300 hover:text-white transition-colors">
+                            <i class="fa-brands fa-twitter"></i>
+                        </a>
+                        <a href="#" class="text-gray-300 hover:text-white transition-colors">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                        <a href="#" class="text-gray-300 hover:text-white transition-colors">
+                            <i class="fa-brands fa-linkedin"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#overview" class="text-gray-300 hover:text-white transition-colors">Competition Overview</a></li>
+                        <li><a href="#results" class="text-gray-300 hover:text-white transition-colors">Results</a></li>
+                        <li><a href="#awards" class="text-gray-300 hover:text-white transition-colors">Awards</a></li>
+                        <li><a href="#feedback" class="text-gray-300 hover:text-white transition-colors">Feedback & Suggestions</a></li>
+                        <li><a href="#conclusion" class="text-gray-300 hover:text-white transition-colors">Conclusion</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Contact Us</h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-center">
+                            <i class="fa-solid fa-map-marker-alt mr-3"></i>
+                            <span>Address: Jeddah, Saudi Arabia</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fa-solid fa-phone mr-3"></i>
+                            <span>Phone: +966 12 345 6789</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fa-solid fa-envelope mr-3"></i>
+                            <span>Email: info@school.edu.sa</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2025 Jeddah 95 Girls' School. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // 移动端菜单切换
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // 导航栏滚动效果
+        window.addEventListener('scroll', function() {
+            const header = document.getElementById('header');
+            if (window.scrollY > 50) {
+                header.classList.add('py-2');
+                header.classList.remove('py-4');
+            } else {
+                header.classList.add('py-4');
+                header.classList.remove('py-2');
+            }
+        });
+
+        // 平滑滚动
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    window.scrollTo({
+                        top: target.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // 关闭移动菜单
+                    const mobileMenu = document.getElementById('mobile-menu');
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                }
+            });
+        });
+
+        // 图表初始化
+        window.addEventListener('load', function() {
+            // 班级平均分比较图表
+            const classScoresCtx = document.getElementById('classScoresChart').getContext('2d');
+            new Chart(classScoresCtx, {
+                type: 'bar',
+                data: {
+                    labels: ['Class 1', 'Class 2', 'Class 3', 'Class 4'],
+                    datasets: [{
+                        label: 'Average Score',
+                        data: [18.74, 21.80, 18.35, 19.40],
+                        backgroundColor: [
+                            'rgba(30, 136, 229, 0.7)',
+                            'rgba(67, 160, 71, 0.7)',
+                            'rgba(38, 166, 154, 0.7)',
+                            'rgba(30, 136, 229, 0.5)'
+                        ],
+                        borderColor: [
+                            'rgba(30, 136, 229, 1)',
+                            'rgba(67, 160, 71, 1)',
+                            'rgba(38, 166, 154, 1)',
+                            'rgba(30, 136, 229, 0.8)'
+                        ],
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            max: 30,
+                            title: {
+                                display: true,
+                                text: 'Average Score'
+                            }
+                        }
+                    },
+                    plugins: {
+                        legend: {
+                            display: false
+                        },
+                        tooltip: {
+                            callbacks: {
+                                label: function(context) {
+                                    return `Average Score: ${context.raw.toFixed(2)}`;
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+        });
+
+        // 图片轮播功能
+        document.addEventListener('DOMContentLoaded', function() {
+            const carouselSlide = document.getElementById('carousel-slide');
+            const carouselItems = document.querySelectorAll('.carousel-item');
+            const prevBtn = document.getElementById('prev-slide');
+            const nextBtn = document.getElementById('next-slide');
+            const thumbnails = document.querySelectorAll('.gallery-thumbnail');
+            const galleryContainer = document.getElementById('gallery-thumbnails');
+            const imageUpload = document.getElementById('image-upload');
+            
+            let currentIndex = 0;
+            const slideWidth = 100; // 百分比
+            const totalSlides = carouselItems.length;
+            
+            // 设置初始位置
+            updateCarouselPosition();
+            
+            // 下一张图片
+            nextBtn.addEventListener('click', function() {
+                currentIndex = (currentIndex + 1) % totalSlides;
+                updateCarousel();
+            });
+            
+            // 上一张图片
+            prevBtn.addEventListener('click', function() {
+                currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+                updateCarousel();
+            });
+            
+            // 缩略图点击切换
+            thumbnails.forEach((thumbnail, index) => {
+                thumbnail.addEventListener('click', function() {
+                    currentIndex = index;
+                    updateCarousel();
+                });
+            });
+            
+            // 自动轮播
+            let autoplayInterval = setInterval(function() {
+                currentIndex = (currentIndex + 1) % totalSlides;
+                updateCarousel();
+            }, 5000);
+            
+            // 鼠标悬停暂停自动轮播
+            carouselSlide.addEventListener('mouseenter', function() {
+                clearInterval(autoplayInterval);
+            });
+            
+            // 鼠标离开恢复自动轮播
+            carouselSlide.addEventListener('mouseleave', function() {
+                autoplayInterval = setInterval(function() {
+                    currentIndex = (currentIndex + 1) % totalSlides;
+                    updateCarousel();
+                }, 5000);
+            });
+            
+            // 图片上传功能
+            imageUpload.addEventListener('change', function(e) {
+                const files = e.target.files;
+                if (files) {
+                    Array.from(files).forEach(file => {
+                        if (file.type.match('image.*')) {
+                            const reader = new FileReader();
+                            
+                            reader.onload = function(e) {
+                                // 添加到轮播
+                                const newSlide = document.createElement('div');
+                                newSlide.className = 'carousel-item';
+                                newSlide.style.backgroundImage = `url('${e.target.result}')`;
+                                carouselSlide.appendChild(newSlide);
+                                
+                                // 添加到缩略图
+                                const newThumbnail = document.createElement('img');
+                                newThumbnail.src = e.target.result;
+                                newThumbnail.alt = 'Uploaded Image';
+                                newThumbnail.className = 'gallery-thumbnail';
+                                newThumbnail.addEventListener('click', function() {
+                                    currentIndex = carouselItems.length - 1;
+                                    updateCarousel();
+                                });
+                                galleryContainer.appendChild(newThumbnail);
+                                
+                                // 更新轮播状态
+                                carouselItems = document.querySelectorAll('.carousel-item');
+                                thumbnails = document.querySelectorAll('.gallery-thumbnail');
+                                updateCarouselPosition();
+                            }
+                            
+                            reader.readAsDataURL(file);
+                        }
+                    });
+                }
+            });
+            
+            // 更新轮播位置
+            function updateCarousel() {
+                updateCarouselPosition();
+                updateActiveThumbnail();
+            }
+            
+            // 设置轮播位置
+            function updateCarouselPosition() {
+                carouselSlide.style.transform = `translateX(-${currentIndex * slideWidth}%)`;
+            }
+            
+            // 更新活动缩略图
+            function updateActiveThumbnail() {
+                thumbnails.forEach((thumbnail, index) => {
+                    if (index === currentIndex) {
+                        thumbnail.classList.add('active');
+                    } else {
+                        thumbnail.classList.remove('active');
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>
+    
